@@ -1,4 +1,7 @@
 
 /node_modules
 
-/styles/css/styles.css
+/dist
+/dist/*
+
+yarn-error.log
