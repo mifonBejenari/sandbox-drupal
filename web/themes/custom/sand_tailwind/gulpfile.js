@@ -5,11 +5,12 @@
 
 const config = {
   srcFiles: [
-    './scss/**/*.scss'
+    './components/**/*.scss'
   ],
   filesToWatch: [
-    './scss/**/*.scss',
-    './templates/**/*.html.twig'
+    './components/**/*.scss',
+    './components/**/*.html.twig',
+    './templates/**/*.html.twig',
   ],
   options: {
     includePaths: [
@@ -26,22 +27,11 @@ const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const sassGlob = require('gulp-sass-glob');
 const postcss = require('gulp-postcss', 'tailwindcss');
-// const tailwindcss = require('tailwindcss');
-
-/**
- * Sets up watchers.
- */
-function watchFiles() {
-  gulp.watch(config.filesToWatch, compileSass);
-}
-
-const watch = gulp.series(compileSass, watchFiles);
 
 /**
  * Compiles global Sass files.
  */
 function compileSass() {
-
   return gulp.src(config.srcFiles)
     .pipe(sassGlob())
     .pipe(sourcemaps.init())
@@ -55,5 +45,15 @@ function compileSass() {
     .pipe(gulp.dest(config.destDir))
 }
 
+/**
+ * Sets up watchers.
+ */
+function watchFiles() {
+  gulp.watch(config.filesToWatch, compileSass);
+}
+
+const watch = gulp.series(compileSass, watchFiles);
+
 exports.watch = watch;
+exports.buildSass = gulp.series(compileSass);
 exports.default = watch;
