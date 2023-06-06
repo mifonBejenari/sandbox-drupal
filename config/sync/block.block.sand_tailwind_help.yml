@@ -1,0 +1,22 @@
+uuid: 9368e4d8-797a-437a-8141-7b92e49ef9bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - sand_tailwind
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: sand_tailwind_help
+theme: sand_tailwind
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

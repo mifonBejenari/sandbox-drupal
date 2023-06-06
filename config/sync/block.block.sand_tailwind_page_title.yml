@@ -1,0 +1,20 @@
+uuid: 4723d071-d5e3-4d6d-9bf7-de098e7fc7f9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sand_tailwind
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: sand_tailwind_page_title
+theme: sand_tailwind
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

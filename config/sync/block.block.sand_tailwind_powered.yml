@@ -1,0 +1,22 @@
+uuid: 2fb465f4-3e08-40cd-ae4f-375b9e16628c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sand_tailwind
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: sand_tailwind_powered
+theme: sand_tailwind
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

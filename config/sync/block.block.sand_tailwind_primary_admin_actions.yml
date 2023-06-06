@@ -1,0 +1,20 @@
+uuid: 9c920558-602b-48f0-a6a6-15e066a5ec60
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sand_tailwind
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: sand_tailwind_primary_admin_actions
+theme: sand_tailwind
+region: header
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

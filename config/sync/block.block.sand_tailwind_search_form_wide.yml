@@ -1,0 +1,23 @@
+uuid: 605c47f4-8044-47d9-90d0-e87151e70365
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - sand_tailwind
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: sand_tailwind_search_form_wide
+theme: sand_tailwind
+region: header
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }
