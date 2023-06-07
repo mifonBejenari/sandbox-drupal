@@ -19,7 +19,6 @@ const config = {
 };
 
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const sassGlob = require('gulp-sass-glob');
@@ -36,8 +35,7 @@ function compileSass() {
       sass({ outputStyle: 'expanded' })
         .on('error', sass.logError)
     )
-    .pipe(postcss(require('tailwindcss')))
-    .pipe(autoprefixer())
+    .pipe(postcss([require('tailwindcss'), require('autoprefixer')]))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.destDir))
 }
