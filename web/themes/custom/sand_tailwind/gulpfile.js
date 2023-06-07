@@ -1,6 +1,3 @@
-/**
- * Compile .scss source to .css
- */
 "use strict";
 
 const config = {
@@ -9,7 +6,7 @@ const config = {
   ],
   filesToWatch: [
     './components/**/*.scss',
-    './components/**/*.html.twig',
+    './components/**/*.twig',
     './templates/**/*.html.twig',
   ],
   options: {
@@ -39,7 +36,7 @@ function compileSass() {
       sass({ outputStyle: 'expanded' })
         .on('error', sass.logError)
     )
-    .pipe(postcss([require('tailwindcss'), require('autoprefixer')]))
+    .pipe(postcss(require('tailwindcss')))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.destDir))

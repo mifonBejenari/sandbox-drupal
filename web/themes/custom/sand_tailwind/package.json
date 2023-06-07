@@ -12,6 +12,9 @@
   },
   "scripts": {
     "build-sass": "gulp buildSass",
-    "gulp": "gulp"
+    "watch": "gulp watch && npx tailwindcss -o dist/css/styles.css --watch",
+    "dev": "yarn watch-tailwind && yarn watch",
+    "build-tailwind": "npx tailwindcss build -i assets/src/css/styles.css -o assets/dist/css/styles.css",
+    "watch-tailwind": "npx tailwindcss -o dist/css/styles.css --watch"
   }
 }
