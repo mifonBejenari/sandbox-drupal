@@ -1,0 +1,19 @@
+// Primary Button
+:root {
+  --btn-primary-clr: var(--white);
+  --btn-primary-clr--hover: var(--white);
+  --btn-primary-clr--focus: var(--white);
+  --btn-primary-clr--disabled: var(--darkGray);
+  --btn-primary-bg: var(--purple);
+  --btn-primary-bg--hover: var(--black);
+  --btn-primary-bg--focus: var(--black);
+  --btn-primary-bg--disabled: var(--mediumGray);
+  --btn-primary-border: var(--purple);
+  --btn-primary-border--hover: var(--black);
+  --btn-primary-border--focus: var(--blue);
+  --btn-primary-border--disabled: var(--mediumGray);
+  --btn-primary-shadow: var(--purple);
+  --btn-primary-shadow--hover: var(--black);
+  --btn-primary-shadow--focus: var(--purple);
+  --btn-primary-shadow--disabled: var(--purple);
+}

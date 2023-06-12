@@ -1,0 +1,34 @@
+{#
+/**
+  *  templates/_button.twig
+  *  The Button template.
+  *  This template is used to generate a button.
+  *
+  *  Variables:
+  *   - label: The label of the button.
+  *   - path: The path of the button.
+  *   - type: The type of the button.
+  *   - class: The class of the button.
+  *   - id: The id of the button.
+  *   - value: The value of the button.
+ */
+#}
+
+{% set classes = '' %}
+
+{% if path %}
+  <a
+    href="{{ path }}"
+    class="btn{{ classes }}"
+  >
+    {{ label }}
+  </a>
+{% else %}
+  <button
+    id="{{ id }}"
+    value="{{ value }}"
+    class="btn">
+    {{ label }}
+  </button>
+{% endif %}
+
